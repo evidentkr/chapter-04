@@ -25,16 +25,16 @@ public class JPAClient {
 			tx.begin();
 
 			// 게시글 생성
-//			Board board = new Board();
-//			board.setTitle("JPA 제목");
-//			board.setWriter("작성자");
-//			board.setContent("JPA 내용");
-//			board.setCreateDate(new Date());
-//			board.setCnt(0L);
+			Board board = new Board();
+			board.setTitle("JPA 제목");
+			board.setWriter("작성자");
+			board.setContent("JPA 내용");
+			board.setCreateDate(new Date());
+			board.setCnt(0L);
 
 			// 수정할 게시글 조회
-			Board board = em.find(Board.class, 1L);
-			board.setTitle("검색한 게시글의 제목 수정");
+//			Board board = em.find(Board.class, 1L);
+//			board.setTitle("검색한 게시글의 제목 수정");
 			
 			em.persist(board);
 			

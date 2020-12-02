@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -18,9 +19,11 @@ public class Board {
 	private String title;
 	private String writer;
 	private String content;
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createDate;
 	private Long cnt;
+	@Transient
+	private String ignore;
 
 	public Long getSeq() {
 		return seq;
