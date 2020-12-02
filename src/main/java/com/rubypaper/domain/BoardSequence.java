@@ -14,10 +14,10 @@ import javax.persistence.Transient;
 
 
 @Entity
-@TableGenerator(name = "BOARD_SEQ_GENERATOR",table="TABLE_KEYGEN", pkColumnValue="BOARD_SEQ", initialValue= 0, allocationSize=1)
-public class BoardKeygen {
+@TableGenerator(name = "BOARD_SEQ_GENERATOR2",table="TABLE_SEQUENCES", initialValue= 0, allocationSize=1)
+public class BoardSequence {
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "BOARD_SEQ_GENERATOR")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOARD_SEQ_GENERATOR2")
 	private Long seq;
 
 	private String title;

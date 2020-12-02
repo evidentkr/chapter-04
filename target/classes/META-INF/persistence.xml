@@ -3,6 +3,7 @@
 	<persistence-unit name="chapter-04">
 		<class>com.rubypaper.domain.Board</class>
 		<class>com.rubypaper.domain.BoardKeygen</class>
+		<class>com.rubypaper.domain.BoardSequence</class>
 		
 		<properties>
 			<!-- 필수 속성 -->
