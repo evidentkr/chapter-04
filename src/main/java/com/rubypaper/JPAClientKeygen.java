@@ -33,10 +33,15 @@ public class JPAClientKeygen {
 			boardKeygen.setCnt(0L);
 
 			// 수정할 게시글 조회
-//			Board boardKeygen = em.find(boardKeygen.class, 1L);
+//			BoardKeygen boardKeygen = em.find(BoardKeygen.class, 1L);
 //			boardKeygen.setTitle("검색한 게시글의 제목 수정");
 			
-			em.persist(boardKeygen);
+			// 생성/수정 공용
+			//em.persist(boardKeygen);
+			
+			// 게시글 삭제
+//			BoardKeygen boardKeygen = em.find(BoardKeygen.class, 1L);
+//			em.remove(boardKeygen);
 			
 			// Transaction commit
 			tx.commit();
