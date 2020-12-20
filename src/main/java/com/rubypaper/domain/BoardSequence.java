@@ -7,14 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.TableGenerator;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 
 @Entity
-@TableGenerator(name = "BOARD_SEQ_GENERATOR2",table="TABLE_SEQUENCES", initialValue= 0, allocationSize=1)
+@SequenceGenerator(name = "BOARD_SEQ_GENERATOR2",sequenceName="BOARD_SEQUENCES", initialValue= 1, allocationSize=1)
 public class BoardSequence {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOARD_SEQ_GENERATOR2")
