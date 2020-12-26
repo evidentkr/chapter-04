@@ -1,6 +1,7 @@
 package com.rubypaper;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -31,12 +32,24 @@ public class JPAClient {
 			board.setContent("JPA 내용");
 			board.setCreateDate(new Date());
 			board.setCnt(0L);
+			em.persist(board);
 
-			// 수정할 게시글 조회
+			// 게시글 수정
 //			Board board = em.find(Board.class, 1L);
 //			board.setTitle("검색한 게시글의 제목 수정");
+//			em.persist(board);
 			
-			em.persist(board);
+			// 게시글 삭제
+//			Board board = em.find(Board.class, 1L);
+//			board.setSeq(1L);
+//			em.remove(board);
+			
+			// 게시글 목록 조회
+//			String jpql = "select b from Board b order by b.seq desc";
+//			List<Board> boardList = em.createQuery(jpql, Board.class).getResultList();
+//			for (Board brd : boardList) {
+//				System.out.println("---> "+brd.toString());
+//			}
 			
 			// Transaction commit
 			tx.commit();
@@ -51,5 +64,4 @@ public class JPAClient {
 		}
 
 	}
-
 }
